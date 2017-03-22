@@ -1,2 +1,10 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<h2><%= @restaurant.name.capitalize %></h2>
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.phone_number %></p>
+<p><%= @restaurant.category.capitalize %></p>
+<h2><% @restaurant.reviews.each do |r| %>
+<%= r.content %>
+  <% end %>
+</h2>
+<h2><%= link_to "return home", restaurants_path %></h2>
+

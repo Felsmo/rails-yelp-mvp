@@ -2,7 +2,7 @@
   <% @restaurants.each do |restaurant| %>
   <lu>
     <li>
-      <%= restaurant.name %>
+    <%= link_to restaurant.name.capitalize, restaurant_path(restaurant) %>
     </li>
     <% end %>
   </lu>
